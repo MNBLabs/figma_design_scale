@@ -1,8 +1,8 @@
 name: figma_design_scale
-description: Orientation-aware, Figma-frame-based responsive scaling for Flutter (sizes & fonts) with sensible clamps.
-version: 0.1.0
-repository: https://github.com/MNBLabs/figma_design_scale.git
-issue_tracker: https://github.com/MNBLabs/figma_design_scale.git/issues
+description: Orientation-aware Figma-frame scaling for Flutter. Keeps layout and fonts stable across devices and rotations.
+version: 0.1.1
+repository: https://github.com/MNBLabs/figma_design_scale
+issue_tracker: https://github.com/MNBLabs/figma_design_scale/issues
 homepage: https://github.com/MNBLabs/figma_design_scale.git
 topics: [responsive, layout, figma, scaling]
 

@@ -1,4 +1,7 @@
-# figma_design_scale
+# Figma Design Scale for Flutter
+
+[![pub package](https://img.shields.io/pub/v/figma_design_scale.svg)](https://pub.dev/packages/figma_design_scale)
+[![pub points](https://img.shields.io/pub/points/figma_design_scale)](https://pub.dev/packages/figma_design_scale/score)
 
 Orientation-aware, Figma-frame-based scaling for Flutter (sizes & fonts) with sensible clamps.
 
@@ -6,10 +9,29 @@ Orientation-aware, Figma-frame-based scaling for Flutter (sizes & fonts) with se
 - Uses **min(widthRatio, heightRatio)** to avoid over-expansion on squat screens  
 - Font strategy: **portrait = gentle mean**, **landscape = base scale** (prevents oversized text)
 
+> **Note:** [`flutter_ui_scaler`](https://pub.dev/packages/flutter_ui_scaler) is the recommended successor to `figma_design_scale`, offering more active maintenance and improvements.
+
 ## Why
 
 Figma designs are usually portrait-first. Naïve scaling often makes landscape text enormous and spacing inconsistent.  
 This package keeps typography and layout stable across rotations and extreme aspect ratios.
+
+## Comparison
+
+| Figma Design | With this package | Without (native scaling) |
+|---|---|---|
+| <img src="https://raw.githubusercontent.com/MNBLabs/flutter_ui_scaler/main/assets/figma_design.png" height="520"/> | <img src="https://raw.githubusercontent.com/MNBLabs/flutter_ui_scaler/main/assets/with_plugin.png" height="520"/> | <img src="https://raw.githubusercontent.com/MNBLabs/flutter_ui_scaler/main/assets/without_plugin.png" height="520"/> |
+
+👉 Notice how proportions, text size, and padding stay **true to the design** with the plugin.
+
+### Landscape Behaviour
+
+| With | Without |
+|---|---|
+| <img src="https://raw.githubusercontent.com/MNBLabs/flutter_ui_scaler/main/assets/landsp_with_plugin.png" width="350"/> | <img src="https://raw.githubusercontent.com/MNBLabs/flutter_ui_scaler/main/assets/landsp_without_plugin.png" width="350"/> |
+
+✅ Text scaling stays consistent  
+❌ Native scaling causes bloated titles and mismatched spacing
 
 ## Installation
 
@@ -17,7 +39,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-    figma_design_scale: ^0.1.0
+    figma_design_scale: ^latest
 ```
 
 Then, import it in your Dart code:
@@ -71,3 +93,7 @@ Set `tightFontsInLandscape: true` (default). For global strictness, fork the pac
 ## Versioning
 
 This package follows [Semantic Versioning](https://semver.org/). Breaking API changes trigger a major version bump.
+
+## License
+
+MIT © MNBLabs
